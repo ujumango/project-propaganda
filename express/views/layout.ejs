@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/common/reset.css"> 
+  <link rel="stylesheet" href="css/common/common.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/header.css"> 
+  <link rel="stylesheet" href="css/main.css"> 
+
+
+  <title>Document</title>
+</head>
+<body>
+  <div id="header">
+    <%- include('header') -%>
+  </div>
+  <main>
+    <%- body -%>
+  </main>
+  <div id="footer">
+    <%- include('footer') -%>
+  </div>
+</body>
+
+
+      <!-- Swiper -->
+  
+      <script src="js/main.js"></script>
+      <script src="js/modal.js"></script>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper1", {
+          scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: true,
+          },
+          autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+      },
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        }
+      });
+      var swiper = new Swiper(".mySwiper2-1", {
+          slidesPerView: 3,
+          spaceBetween: 50,
+          centeredSlides: true,
+          loop: true,
+          loopedSlides: 1,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+  
+        
+      </script>
+</html>

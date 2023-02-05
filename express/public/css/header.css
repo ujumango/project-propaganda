@@ -1,0 +1,103 @@
+header{
+    width: 100%;
+    position: fixed;
+    /* border: 1px solid red; */
+    background-color: rgba(0,0,0,0.05);
+    backdrop-filter: blur(15px);
+    z-index: 5;
+    transition: background 0.3s;
+    /* background-color: skyblue; */
+}
+header.active{
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    transition: background 0.3s;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+}
+.mainMenu{
+    display: flex;
+    gap: 20px;
+}
+.mainMenu>li{
+    font-size: 1.25rem;
+}
+header.active .mainMenu>li>a{
+    color: #000000;
+}
+.mainMenu>li>a{
+    vertical-align:middle;
+    color: #fff;
+}
+.rightMenu{
+    display: flex;
+    gap: 20px;  
+}
+header .rightMenu #cartNum{
+    padding: 0 1px;
+    box-sizing: border-box;
+}
+header.active .rightMenu>li{
+    color: #000;
+    
+}
+.rightMenu>li{
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.h_gnb{
+    display: flex;
+   gap: 40px;
+}
+header .h_logo{
+    font-weight: 800;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+header.active .h_logo>a{
+    color: #000;
+}
+header .h_logo>a{
+    color: #fff;
+}
+
+
+
+/* footer */
+
+footer{
+    padding: 5rem 0;
+}
+footer .footerWrap{
+    display: flex;
+
+}
+footer .f_left{
+    width: 35%;
+}
+footer h2{
+    font-size: 3rem;
+}
+footer.h_logo>a{
+    color: #000;
+}
+footer .f_right{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 3.75rem; */
+    width: 65%;
+    /* background-color: antiquewhite; */
+}
+footer h6{
+    font-weight: 500;
+    color: #00000050;
+}
+footer .f_right ul>li{
+    font-size: 1.5rem;
+}

@@ -1,0 +1,52 @@
+
+
+html,body{
+    margin: 0;
+	padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: calc(0.625vw + 4px) !important;
+    line-height: 1.6;
+}
+
+ul,li{
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.sec_wrap{
+    margin: 0 auto;
+    padding: 0 5rem;
+    box-sizing: border-box;
+}
+
+.section{
+    padding: 5rem 0;
+}
+
+.whFont{
+    color: #fff;
+}
+
+
+h1{
+ font-size: 4rem;
+}
+h2{
+ font-size: 3.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+h5{
+    font-size: 1.2rem;
+}
