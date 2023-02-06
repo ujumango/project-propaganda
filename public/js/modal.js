@@ -60,9 +60,9 @@ plus.addEventListener('click',()=>{
     amount2.textContent = i;
 
     let totalcostNum = i*cost;
-    total.textContent = '₩ ' + totalcostNum.toLocaleString();
-    total2.textContent = '₩ ' + totalcostNum.toLocaleString();
-    totalC2.innerHTML  = '<span>TOTAL</span> <h4 class="total">₩ '+ totalcostNum.toLocaleString() +'</h4>';
+    total.textContent = totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" });;
+    total2.textContent = totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" });;
+    totalC2.innerHTML  = '<span>TOTAL</span> <h4 class="total"> '+totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" }); +'</h4>';
   }
 })
 minus.addEventListener('click',()=>{
@@ -70,9 +70,9 @@ minus.addEventListener('click',()=>{
     i--;
     amount.textContent = i;
     let totalcostNum = i*cost;
-    total.textContent = '₩ ' + totalcostNum.toLocaleString();
-    total2.textContent = '₩ ' + totalcostNum.toLocaleString();
-    totalC2.innerHTML  = '<span>TOTAL</span> <h4 class="total">₩ '+ totalcostNum.toLocaleString() +'</h4>';
+    total.textContent = totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" });;
+    total2.textContent = totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" });;
+    totalC2.innerHTML  = '<span>TOTAL</span> <h4 class="total">'+ totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" }); +'</h4>';
   }
   
 })
@@ -124,8 +124,8 @@ plus2.addEventListener('click',()=>{
     i++
     amount2.textContent = i;
     let totalcostNum = i*cost;
-    total2.textContent = '₩ ' + totalcostNum.toLocaleString();
-    totalC2.innerHTML  = '<span>TOTAL</span> <h4 class="total">₩ '+ totalcostNum.toLocaleString() +'</h4>';
+    total2.textContent = totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" });
+    totalC2.innerHTML  = '<span>TOTAL</span> <h4 class="total">'+ totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" }); +'</h4>';
   }
 })
 minus2.addEventListener('click',()=>{
@@ -133,8 +133,8 @@ minus2.addEventListener('click',()=>{
     i--;
     amount2.textContent = i;
     let totalcostNum = i*cost;
-    total2.textContent = '₩ ' + totalcostNum.toLocaleString();
-    totalC2.innerHTML  = '<span>TOTAL</span> <h4 class="total">₩ '+ totalcostNum.toLocaleString() +'</h4>';
+    total2.textContent = totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" });
+    totalC2.innerHTML  = '<span>TOTAL</span> <h4 class="total"> '+ totalcostNum.toLocaleString("ko-KR", { style: "currency", currency: "KRW" });+'</h4>';
   }
   
 })

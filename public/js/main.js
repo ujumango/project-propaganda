@@ -77,7 +77,7 @@ console.log(sec5Top)
 window.addEventListener('scroll', ()=>{
     let windowTop = window.scrollY;
 
-    if(windowTop > sec5Top-85){
+    if(windowTop > sec5Top-80){
         header.classList.add('active')
     }else{
         header.classList.remove('active')
