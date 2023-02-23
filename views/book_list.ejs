@@ -1,35 +1,43 @@
 
 
-<section id="product_list">
-    <div class="list_wrap p150">
-      <h3 class="notice_h3">신제품</h3>
-      <p class="notice_p">리바이리의 새로운 제품을 만나보세요</p>
+<section id="book_list">
+    <div class="list_wrap">
+
      
       <article>
-        <div class="product_wrap">
- 
-
+        <div class="book_wrap sec_wrap">
+          <div class="list_left">
+             <h2>도서목록</h2>
+             <div class="product_list_btn">    
+              <input type="button" value="글쓰기" class="write_btn" onclick="location.href='/bookwrite'"></div>
+          </div>
+          <div class="list_right">
+            
             <% rows.forEach((row, index)=>{ %>
-                <% let price = row.price.toLocaleString() %>
+              <% let price = row.price.toLocaleString() %>
 
-                <figure class="product">
-                   
-                    <div class="img" onclick="javascript:location.href='/productviewer?id=<%= row.id %>'"><img src="<%= row.img %>" alt=""></div>
-                    <figcaption>
-                        <h4><%= row.name %></h4>
-                        <p class="txts"><%= row.product_txt %></p>
-                        <p class="price"><%= price %> 원</p>
+              <figure class="book">
+                 
+                  <div class="img" onclick="javascript:location.href='/bookviewer?id=<%= row.id %>'"><img src="<%= row.img %>" alt=""></div>
+                  <figcaption>
+                      <h4><%= row.title %></h4>
+                      <p class="txts"><%= row.info %></p>
+                      <p class="txts"><%= row.writer %></p>
+                      <p class="price"><%= price %> 원</p>
 
-                        
+                      
 
-                       
-                   
-                    </figcaption>
+                     
+                 
+                  </figcaption>
 
-                   
-                </figure>
+                 
+              </figure>
 
-            <% }); %>
+          <% }); %>
+
+          </div>
+ 
 
     </div>
       </article>
@@ -40,8 +48,7 @@
    
 
     </div>
-    <div class="product_list_btn p100">    
-        <input type="button" value="글쓰기" class="write_btn" onclick="location.href='/productwrite'"></div>
+   
 </div>
   
   </section>

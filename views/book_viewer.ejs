@@ -8,12 +8,13 @@
 
                     <% let price = row.price.toLocaleString() %>
 
-                        <p><%= row.product_txt %></p>
-                        <h3  ><%= row.name %></h3>
+                        <p><%= row.info %></p>
+                        <h3  ><%= row.title %></h3>
+                        <h3  ><%= row.writer %></h3>
                         <h4><%= price %> 원</h4>
                         <h4 class="line">제품설명<span>65reviews</span></h4>
-                        <p><%= row.product_exp %></p>
-                        <input type="button" value="목록" class="list_btn" onclick="location.href='/productlist'">
+                        <p><%= row.titleinfo %></p>
+                        <input type="button" value="목록" class="list_btn" onclick="location.href='/booklist'">
                   
                     </div>
                   
@@ -38,8 +39,8 @@
                             <div id="pv_naver"><a href="">네이버페이</a></div>
                             <p>*지금 신규가입시 포인트 4천원 지급</p>
                             <div class="btn">
-                                <input type="button" value="삭제" onclick="javascript:location.href='/deleteP?id=<%= row.id %>'">
-                                <input type="button" value="수정" onclick="javascript:location.href='/productBtn?id=<%= row.id %>'">
+                                <input type="button" value="삭제" onclick="javascript:location.href='/deleteB?id=<%= row.id %>'">
+                                <input type="button" value="수정" onclick="javascript:location.href='/bookBtn?id=<%= row.id %>'">
                             </div>
                   
                       

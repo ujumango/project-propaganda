@@ -1,0 +1,40 @@
+#book_list {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+#book_list .list_wrap{
+    padding:80px 0;
+
+
+
+}
+#book_list .book_wrap{
+    padding-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    }
+#book_list .list_left{
+    width: 33%;
+    height: 100vh;
+    /* border-right: 1px solid #000; */
+    /* background-color: #95bbc4; */
+    }
+#book_list .list_right figcaption{
+    width: 700px;
+}
+#book_list .list_right img{
+    display: block;
+    width: 700px; height: auto;
+    text-align: center;
+}
+
+/* 
+padding-top: 10px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+word-break: break-all; */
