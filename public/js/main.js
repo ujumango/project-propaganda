@@ -70,8 +70,40 @@ for(let j=0; j<title_js.length; j++){
 //header 테스트
 
 let section5 = document.querySelector('.section5');
-let sec5Top = section5.offsetTop;
+
 let header = document.querySelector('header')
+
+
+
+
+
+//서브페이지에서 헤더 색상 변경
+
+// window.onload = function () {
+//     headerC();
+
+// };
+
+// function headerC() {
+//     if (location.pathname == '/') {
+//         header.classList.remove('headerColor')
+//     } else if (location.pathname != '/'){
+//         header.classList.add('headerColor')
+//     }
+// }
+
+if (location.pathname != '/') {
+    console.log('안녕!')
+    header.classList.add('headerColor')
+} else if (location.pathname == '/'){
+    console.log('잘가!')
+    header.classList.remove('headerColor')
+}
+
+
+
+let sec5Top = section5.offsetTop;
+
 console.log(section5)
 console.log(sec5Top)
 window.addEventListener('scroll', ()=>{
@@ -83,6 +115,7 @@ window.addEventListener('scroll', ()=>{
         header.classList.remove('active')
     }
 })
+
 
 
 

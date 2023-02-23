@@ -1,10 +1,11 @@
-
+<section id="join">
+  <div>
     <form method="post" action="/writeJoin" onsubmit="return Validation();">
-      <table class="join">
+      <table class="join_tb">
         <tr>        
           <td colspan="2">
-          <h1>Join us</h1>
-          <p>리바이리가 전하는 새로운 아름다움을 경험하세요</p>
+          <h3 class="notice_h3">JOIN</h3>
+          <p class="notice_p">환영합니다</p>
         </td>
       </tr>
       <tr>
@@ -21,7 +22,7 @@
       </tr>
       <tr>
         <td><label for="mail">이메일</label></td>
-        <td><input type="text" name="mail" placeholder="email" id="mail"></td>
+        <td><input type="text" name="email" placeholder="email" id="mail"></td>
       </tr>
       <tr>
         <td><label for="name">이름</label></td>
@@ -31,20 +32,18 @@
         <td><label for="adress">주소</label></td>
         <td><input type="text" name="adress" placeholder="adress" id="adress"></td>
       </tr>
-      <tr>
-      <tr>
-        <td><label for="adress">주소</label></td>
-        <td><input type="text" name="adress" placeholder="adress" id="adress"></td>
-      </tr>
+ 
       <tr>
         <td><label for="birth">생일</label></td>
         <td><input type="date" name="birth" placeholder="birth" id="birth"></td>
       </tr>
-      <tr>
-        <td class="btn" colspan="2">
-          <input type="submit" value="확인" id="submit"></td>
-      </tr>
+ 
+
+      
       </table>
+      <div class="join_btn"><input type="submit" value="확인" id="submit"></div>
 
     </form>
-    <script src="js/join.js"></script>
+  </div>
+</section>
+

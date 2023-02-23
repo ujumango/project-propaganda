@@ -6,20 +6,6 @@ const fs = require('fs');
 // const db = require('./../db.js');
 
 
-const html = `<!doctype html>
-  <html>
-  <head>
-  <title>Node HTML</title>
-  </head>
-  <body>
-  <h1>hello</h1>
-  <form action='/name' method='POST'>
-  <input type='text' name='name' placehorder='이름'>
-  <button>확인</button>
-  </form>
-  </boby>
-  </html>
-`
 router.get('/', (req, res)=>{
   //필요한 데이터를 여기에 적어준다.
   // res.send(html);
@@ -27,35 +13,67 @@ router.get('/', (req, res)=>{
 });
 
 
-//페이지 연결
-router.get('/sub1', (req, res)=>{
- res.render('sub1');
- //페이지를 불러올 때 쓰는 것 render
+const upload = multer({
+  storage:multer.diskStorage({
+    destination(req,file,done){
+      done(null, 'public/uploads/');
+    },
+    filename(req,file,done){
+      const ext = path.extname(file.originalname);
+      done(null, path.basename(file.originalname, ext)+ Date.now() + ext);
+    }
+  }),
+
+  limits:{fileSize:1024*1024*10}
+});
+
+
+router.get('/bookwrite', (req, res)=>{
+  res.render('book_write');
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//login
+router.get('/login', (req, res)=>{
+ res.render('login');
 });
 
 
 
 
-// router.post('/writejoin',(req, res) =>{
-//   let paramJoin = JSON.parse(JSON.stringify(req.body));
+router.post('/writejoin',(req, res) =>{
+  let paramJoin = JSON.parse(JSON.stringify(req.body));
 
-//   let name = paramJoin['name'];
-//   let adress = paramJoin['adress'];
-//   let birth = paramJoin['birth']
-//   let id = paramJoin['id'];
-//   let pw = paramJoin['pw'];
-//   let repw = paramJoin['repw'];
-//   console.log(name);
-//   console.log(adress);
-//   console.log(birth);
-//   console.log(id);
-//   console.log(pw);
-//   console.log(repw);
-// })
+  let name = paramJoin['name'];
+  let adress = paramJoin['adress'];
+  let birth = paramJoin['birth']
+  let id = paramJoin['id'];
+  let pw = paramJoin['pw'];
+  let repw = paramJoin['repw'];
+  console.log(name);
+  console.log(adress);
+  console.log(birth);
+  console.log(id);
+  console.log(pw);
+  console.log(repw);
+})
 
-// router.get('/join',(req, res)=>{
-//   res.render('join');
-// })
+router.get('/join',(req, res)=>{
+  res.render('join');
+})
 
 
 

@@ -13,6 +13,11 @@ header.active{
     border-bottom: 1px solid #000;
     transition: background 0.3s;
 }
+header.headerColor{
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    transition: background 0.3s;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -30,6 +35,12 @@ nav{
 header.active .mainMenu>li>a{
     color: #000000;
 }
+header.active .mainMenu>li>a{
+    color: #000000;
+}
+header.headerColor .mainMenu>li>a{
+    color: #000000;
+}
 .mainMenu>li>a{
     vertical-align:middle;
     color: #fff;
@@ -43,10 +54,23 @@ header .rightMenu #cartNum{
     box-sizing: border-box;
 }
 header.active .rightMenu>li{
-    color: #000;
-    
+    color: #000; 
+}
+header.active .rightMenu>li>a{
+    color: #000; 
+}
+header.headerColor .rightMenu>li{
+    color: #000; 
+}
+header.headerColor .rightMenu>li>a{
+    color: #000; 
 }
 .rightMenu>li{
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.rightMenu>li>a{
     color: #fff;
     font-size: 1.25rem;
     cursor: pointer;
@@ -61,6 +85,9 @@ header .h_logo{
     vertical-align: middle;
 }
 header.active .h_logo>a{
+    color: #000;
+}
+header.headerColor .h_logo>a{
     color: #000;
 }
 header .h_logo>a{

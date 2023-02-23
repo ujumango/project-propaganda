@@ -1,6 +1,6 @@
 let app = require('../app') //이 파일도 같이 요청해서 실행해줘
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 3500;
 
 
 //../app파일 요청했으니까 listen 해줘야 함
