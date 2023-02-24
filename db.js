@@ -52,7 +52,7 @@ function getBookbyId (id, callback){
 }
 
 function updateBook(id,img,title,writer,price,info,titleinfo, callback){
-    connection.query(`UPDATE propabook SET create_time=NOW(),book_img='${img}', title='${title}',writer='${writer}',price='${price}', info='${info}', titleinfo='${titleinfo}' WHERE id=${id}`, (err)=>{
+    connection.query(`UPDATE propabook SET create_time=NOW(),img='${img}', title='${title}',writer='${writer}',price='${price}', info='${info}', titleinfo='${titleinfo}' WHERE id=${id}`, (err)=>{
         if(err) throw err;
         callback();
     })

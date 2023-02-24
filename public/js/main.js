@@ -73,7 +73,7 @@ let section5 = document.querySelector('.section5');
 
 let header = document.querySelector('header')
 
-
+let footer = document.querySelector('footer')
 
 
 
@@ -98,6 +98,14 @@ if (location.pathname != '/') {
 } else if (location.pathname == '/'){
     console.log('잘가!')
     header.classList.remove('headerColor')
+}
+
+if (location.pathname == '/') {
+    console.log('안녕!')
+    footer.style.display = 'block'
+} else if (location.pathname != '/'){
+    console.log('잘가!')
+    footer.style.display = 'none'
 }
 
 

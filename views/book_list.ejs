@@ -7,9 +7,10 @@
       <article>
         <div class="book_wrap sec_wrap">
           <div class="list_left">
-             <h2>도서목록</h2>
-             <div class="product_list_btn">    
-              <input type="button" value="글쓰기" class="write_btn" onclick="location.href='/bookwrite'"></div>
+            <div class="list_left_sticky"><h2>도서목록</h2>
+              <div class="product_list_btn">    
+               <input type="button" value="글쓰기" class="write_btn" onclick="location.href='/bookwrite'"></div></div>
+             
           </div>
           <div class="list_right">
             
@@ -21,8 +22,8 @@
                   <div class="img" onclick="javascript:location.href='/bookviewer?id=<%= row.id %>'"><img src="<%= row.img %>" alt=""></div>
                   <figcaption>
                       <h4><%= row.title %></h4>
-                      <p class="txts"><%= row.info %></p>
                       <p class="txts"><%= row.writer %></p>
+                      <p class="txts"><%= row.titleinfo %></p>
                       <p class="price"><%= price %> 원</p>
 
                       

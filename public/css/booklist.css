@@ -20,9 +20,11 @@
 #book_list .list_left{
     width: 33%;
     height: 100vh;
-    /* border-right: 1px solid #000; */
-    /* background-color: #95bbc4; */
     }
+#book_list .list_left_sticky{
+    position: sticky;
+    top: 130px;
+}
 #book_list .list_right figcaption{
     width: 700px;
 }

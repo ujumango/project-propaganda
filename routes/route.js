@@ -76,7 +76,7 @@ router.post('/updateBook', upload.single('book_img'),(req,res)=>{
   let id = param['id'];
 
   db.updateBook(id,img,title,writer,price,info,titleinfo, ()=>{
-    res.redirect('/productlist');
+    res.redirect('/booklist');
   })
 });
 
